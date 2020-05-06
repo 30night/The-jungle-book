@@ -6,7 +6,7 @@
 # #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 # #   Character.create(name: 'Luke', movie: movies.first)
 
-User.destroy_all 
+# User.destroy_all 
 
 puts 'Adding users...'
 user = User.create([
@@ -25,24 +25,21 @@ user = User.create([
 ])
 puts "Added #{user.count} users"
 
-Species.destroy_all 
+# Species.destroy_all 
 
 puts 'Adding species...'
-species = Species.create(
-  species_type:["Insect", "Reptile", "Bird","Fish", "Mammal", "Mammal (Primate)", "Amphibian", "Mollusc"])
+species = Species.create(species_type: "Universal")
+puts "Added species"
 
-puts "Added the species list"
+# Animal.destroy_all 
 
-Animal.destroy_all 
-
-# puts 'Adding animals'
-# @animal = Animal.create(
-# [
-#   name: "Mandarin Fish",
-#   species_id: 4,
-#   user_id: 1,
-#   habitat: "South-Pacific Ocean",
-#   description: "The mandarin fish (Synchiropus splendidus) swims in the south-west Pacific Ocean close to Australia, Taiwan, and the Philippines. Its array of color is similar to that of the robes worn by an Imperial Chinese mandarin or bureaucrat. The blue color comes from a cellular pigment that is unique to the species. The mandarin fish is only 6 cm long. It dwells in secluded lagoons and reefs, eating small crustaceans."
-# ]
-# ) 
-# puts "Added #{animal.count} animals, woop woop"
+puts 'Adding animals'
+animal = Animal.create([
+  {
+  name: "Mandarin Fish",
+  species_id: 1,
+  user_id: 1,
+  habitat: "South Pacific Ocean",
+  description: "The mandarin fish (Synchiropus splendidus) swims in the south-west Pacific Ocean close to Australia, Taiwan, and the Philippines. Its array of color is similar to that of the robes worn by an Imperial Chinese mandarin or bureaucrat. The blue color comes from a cellular pigment that is unique to the species. The mandarin fish is only 6 cm long. It dwells in secluded lagoons and reefs, eating small crustaceans."}
+]) 
+puts "Added #{animal.count} animals, woop woop"
