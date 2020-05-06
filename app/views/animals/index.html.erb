@@ -1,2 +1,9 @@
 <h1>Animals#index</h1>
-<p>Find me in app/views/animals/index.html.erb</p>
+
+<% @animal.each do |animal| %>
+  <h3><%= animal.name %></h3>
+  <%# <p><strong>Species: </strong><%= animal.species_id[species_type]</p> %>
+  <p><strong>Habitat: </strong><%= animal.habitat %></p>
+  <p><strong>Description: </strong><%= animal.description %></p>
+  <br> <hr> <br> 
+<% end %>

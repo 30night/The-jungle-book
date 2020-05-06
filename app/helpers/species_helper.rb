@@ -1,10 +1,10 @@
 module SpeciesHelper
   def species_type
-    [
+    species_type = [
       ["Insect"], 
       ["Reptile"], 
       ["Bird"],
-      ["Fish",] 
+      ["Fish"], 
       ["Mammal"], 
       ["Mammal (Primate)"], 
       ["Amphibian"], 

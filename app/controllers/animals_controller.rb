@@ -1,6 +1,6 @@
 class AnimalsController < ApplicationController
-  before_action :authenticate_user!, only [:new, :create, :update, :destroy]
-  before_action :find_animal, only [:show, :update, :destroy]
+  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
+  before_action :find_animal, only: [:show, :edit, :update, :destroy]
 
   def index
     @animal = Animal.all
@@ -17,6 +17,9 @@ class AnimalsController < ApplicationController
     @animal = Animal.new(animals_params).save
 
     redirect_to @animal
+  end
+
+  def edit
   end
 
   def update
