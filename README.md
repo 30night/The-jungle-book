@@ -1,30 +1,3 @@
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-ERD:
-
 Project Zoo {
   
   Table users {
@@ -38,7 +11,7 @@ Project Zoo {
     id int PK
     name string
     species_id int 
-    habitat int
+    habitat text
     fun_fact text 
     image string
     user_id int 
@@ -49,15 +22,15 @@ Project Zoo {
     species_id int
   }
   
-  Table habitat {
-    id int PK
-    habitat_type string 
-  }
-  }
+  <!-- // Table habitat {
+  //   id int PK
+  //   habitat_type string 
+  // }
+  } -->
 
 
 Ref: "users"."id" < "animals"."user_id"
 
 Ref: "species"."id" < "animals"."species_id"
 
-Ref: "habitat"."id" < "animals"."habitat"
+// Ref: "habitat"."id" < "animals"."habitat"
