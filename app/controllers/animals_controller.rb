@@ -14,13 +14,20 @@ class AnimalsController < ApplicationController
   end
 
   def create
+    @animal = Animal.new(animals_params).save
 
+    redirect_to @animal
   end
 
   def update
+    @animal.update(animals_params)
+
+    redirect_to @animal
   end
 
   def destroy
+    @animal.destroy
+    redirect_to root_path
   end
 
   private 
@@ -30,6 +37,6 @@ class AnimalsController < ApplicationController
   end
 
   def animals_params
-    require(@animal).permit(:name, :habitat, :description, :species_id)
+    params.require(:animal).permit(:name, :habitat, :description, :species_id, :user_id)
   end
 end

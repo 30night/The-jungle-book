@@ -1,5 +1,5 @@
 class Animal < ApplicationRecord
-  belongs_to :species
-  belongs_to :user
+  belongs_to :species, dependent: :destroy
+  belongs_to :user, dependent: :destroy
   has_one :habitat
 end
