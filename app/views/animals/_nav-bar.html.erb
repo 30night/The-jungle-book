@@ -1,17 +1,29 @@
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
 
-  <nav class="navbar">
-    <%# <div class="container-fluid"> %>
-      <ul class="navbar-nav">
+      <div class="navbar-header">
+        <%= link_to "🐼 The Jungle Book", root_path, class: "nav-bar-brand" %> 
+      </div>
 
-        <li class="nav-item active">
-        <%= link_to "🐼 The Jungle Book", root_path, class: "nav-link" %>      
+      <ul class="nav navbar-nav">
+
+        <li>
+        <%= button_to "Add New Animal", new_animal_path %>
         </li>
 
-        <li class="nav-item">
-        <%= link_to "Add New Animal", new_animal_path, class: "nav-link" %>
+      <% if user_signed_in? %>
+
+        <li>
+        <%= button_to "Logout", destroy_user_session_path, method: :delete %>
         </li>
+
+        <% else %>
+        <li>
+        <%= button_to "Sign Up", new_user_registration_path, method: :get %>
+        </li>
+        <% end %>
+
     </ul>
-  <%# </div> %>
-</nav>
+
+  </div>
 </nav>
