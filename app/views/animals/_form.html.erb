@@ -5,6 +5,11 @@
   </div>
  
   <div>
+    <%= form.label :species %>
+    <%= form.collection_select(:species_id, Species.all, :id, :species_type) %>
+  </div>
+
+  <div>
     <%= form.label :habitat %>
     <%= form.text_field :habitat %>
   </div>
@@ -15,13 +20,11 @@
   </div>
 
   <div>
-    <%= form.label :species %>
-    <%= form.collection_select(:species_id, Species.all, :id, :species_type) %>
+    <%= form.label :picture %>
+    <%= form.file_field :picture, accept: 'image/png,image/gif,image/jpeg,image/jpg' %>
   </div>
-
 
   <div>
     <%= form.submit %>
   </div>
  <% end %>
-
