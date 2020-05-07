@@ -31,7 +31,7 @@ class AnimalsController < ApplicationController
   end
 
   def destroy
-    @animal.destroy
+    @animal.delete
     redirect_to root_path
   end
 
