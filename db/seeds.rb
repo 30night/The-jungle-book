@@ -28,9 +28,11 @@ puts "Added #{user.count} users"
 # Species.destroy_all 
 
 puts 'Adding species...'
-species = Species.create(species_type: "Universal")
-puts "Added species"
 
+require_relative "production_seed"
+# species = Species.create(species_type: "Universal")
+puts "Added species"
+ 
 # Animal.destroy_all 
 
 puts 'Adding animals'
@@ -56,7 +58,7 @@ animal = Animal.create([
   {
   name: "Sea Turtle",
   species_id: 1,
-  user_id: 1,
+  user_id: 4,
   habitat: "Open Water and Coasts",
   description: "Endangered, Seven different species of sea (or marine) turtles grace our ocean waters, from the shallow seagrass beds of the Indian Ocean, to the colorful reefs of the Coral Triangle and the sandy beaches of the Eastern Pacific. While these highly migratory species periodically come ashore to either bask or nest, sea turtles spend the bulk of their lives in the ocean. Over the last 200 years, human activities have tipped the scales against the survival of these ancient mariners. Slaughtered for their eggs, meat, skin, and shells, sea turtles suffer from poaching and over-exploitation. Climate change has an impact on turtle nesting sites; it alters sand temperatures, which then affects the sex of hatchlings."}
 ]) 

@@ -2,7 +2,7 @@
 
 <% @animal.each do |animal| %>
   <h3><%= animal.name %></h3>
-  <%# <p><strong>Species: </strong><%= animal.species_id[species_type]</p> %>
+  <p><strong>Species: </strong><%= animal.species.species_type %></p>
   <p><strong>Habitat: </strong><%= animal.habitat %></p>
   <p><strong>Description: </strong><%= animal.description %></p>
   <br> <hr> <br> 
