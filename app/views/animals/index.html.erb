@@ -5,9 +5,10 @@
 <% @animal.each do |animal| %>
   <%= link_to animal_path(animal) do  %>
   <h3><%= animal.name %></h3>
+  <%= image_tag animal.image %>
   <%# <p><strong>Species: </strong><%= animal.species.species_type %></p> 
-  <p><strong>Habitat: </strong><%= animal.habitat %></p>
-  <p><strong>Description: </strong><%= animal.description %></p>
+  <!-- <p><strong>Habitat: </strong><%= animal.habitat %></p>
+  <p><strong>Description: </strong><%= animal.description %></p> -->
   <% end %>
 <% end %>
 

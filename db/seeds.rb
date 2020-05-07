@@ -42,28 +42,38 @@ animal = Animal.create([
   species_id: 1,
   user_id: 1,
   habitat: "South Pacific Ocean",
-  image: "https://www.fishkeepingworld.com/wp-content/uploads/2019/02/Mandarin-Dragonet-Appearance.jpg",
+  # image: image_url("/mandarin-fish.jpg"),
   description: "The mandarin fish (Synchiropus splendidus) swims in the south-west Pacific Ocean close to Australia, Taiwan, and the Philippines. Its array of color is similar to that of the robes worn by an Imperial Chinese mandarin or bureaucrat. The blue color comes from a cellular pigment that is unique to the species. The mandarin fish is only 6 cm long. It dwells in secluded lagoons and reefs, eating small crustaceans."},
   {
   name: "Highland Cow",
   species_id: 1,
   user_id: 2,
   habitat: "Wet & Mountainous Grasslands",
-  image: "https://img.travelawaits.com/filter:centercrop/quill/d/f/4/e/2/4/df4e2437ce3677bac4544deed8fbe190c067e047.jpg?w=800&h=800",
+  # image: image_url("mandarin-fish.jpg"),
+
   description: "The animal is native to Scotland, although currently found throughout Europe, North America as well as Australia. These fluffy brown cows are famous for their long, pointed horns and their floppy hair. These animals have an interesting look that sets them apart from all other cow breeds."},
   {
   name: "Blue-Footed Booby",
   species_id: 1,
   user_id: 3,
   habitat: "Subtropical & Tropical Regions of Eastern Pacific Ocean",
-  image: "https://esl-voices.com/wp-content/uploads/2017/03/Blue-Footed-Booby.-image-savenature-.jpg",
+  # image: image_url("/mandarin-fish.jpg"),
   description: "Blue-footed boobies are named after their bright blue feet. The birds’ feet are so blue because the carotenoid pigments that they get through their food are concentrated in their feet."},
   {
   name: "Sea Turtle",
   species_id: 1,
   user_id: 1,
   habitat: "Open Water and Coasts",
-  image: "https://c402277.ssl.cf1.rackcdn.com/photos/18349/images/hero_small/Sea_Turtle_Hol_Chan_Marine_Reserve_WW1105958.jpg?1576691810",
+  # image: image_url("/mandarin-fish.jpg"),
   description: "Endangered, Seven different species of sea (or marine) turtles grace our ocean waters, from the shallow seagrass beds of the Indian Ocean, to the colorful reefs of the Coral Triangle and the sandy beaches of the Eastern Pacific. While these highly migratory species periodically come ashore to either bask or nest, sea turtles spend the bulk of their lives in the ocean. Over the last 200 years, human activities have tipped the scales against the survival of these ancient mariners. Slaughtered for their eggs, meat, skin, and shells, sea turtles suffer from poaching and over-exploitation. Climate change has an impact on turtle nesting sites; it alters sand temperatures, which then affects the sex of hatchlings."}
 ]) 
+
+Animal.all.each do | animal |
+  animal.image.attach(
+    io: File.open("app/assets/images/mandarin-fish.jpg"), 
+    filename: "mandarin-fish.jpg", 
+    content_type: "image/jpg"
+  )
+end
+
 puts "Added #{animal.count} animals, woop woop"
