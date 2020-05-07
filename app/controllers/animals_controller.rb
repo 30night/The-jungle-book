@@ -15,13 +15,13 @@ class AnimalsController < ApplicationController
   end
 
   def create
-    @animal = Animal.create(animals_params)
-    # if @animal.errors.any?
-    #   render :new
-    # else 
-    #   flash[:success] = "You successfully added a new animal"
+    @animal = current_user.animals.create(animals_params)
+    if @animal.errors.any?
+      render :new
+    else 
+      flash[:success] = "You successfully added a new animal"
     redirect_to @animal
-    # end
+    end
   end
 
   def edit
