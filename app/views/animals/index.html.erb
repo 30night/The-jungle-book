@@ -1,14 +1,16 @@
 <%= render "nav-bar" %>
 
-<h1>Animals#index</h1>
+<h1>Animal Listing</h1>
 
 <% @animal.each do |animal| %>
   <%= link_to animal_path(animal) do  %>
+<div class="cardmenu">
   <h3><%= animal.name %></h3>
   <%= image_tag animal.image %>
-  <%# <p><strong>Species: </strong><%= animal.species.species_type %></p> 
-  <!-- <p><strong>Habitat: </strong><%= animal.habitat %></p>
-  <p><strong>Description: </strong><%= animal.description %></p> -->
+</div>
   <% end %>
 <% end %>
 
+<div class="bottom-nav">
+  <%= link_to "Back" , :back %>
+</div>

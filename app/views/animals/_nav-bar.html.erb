@@ -1,2 +1,17 @@
-<%= link_to "Jungle book", root_path %>
-<%= link_to "New Animal", new_animal_path %>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+  <nav class="navbar">
+    <%# <div class="container-fluid"> %>
+      <ul class="navbar-nav">
+
+        <li class="nav-item active">
+        <%= link_to "🐼 The Jungle Book", root_path, class: "nav-link" %>      
+        </li>
+
+        <li class="nav-item">
+        <%= link_to "Add New Animal", new_animal_path, class: "nav-link" %>
+        </li>
+    </ul>
+  <%# </div> %>
+</nav>
+</nav>

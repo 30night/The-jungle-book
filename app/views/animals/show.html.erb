@@ -1,11 +1,14 @@
   <%= render "nav-bar" %>
-  
+ <div class="card">
   <h3><%= @animal.name %></h3>
   <p><strong>Species: </strong><%= @animal.species.species_type %></p>
   <p><strong>Habitat: </strong><%= @animal.habitat %></p>
   <p><strong>Description: </strong><%= @animal.description %></p>
   <%= image_tag @animal.image %>
-  <%# <img src="<%= @animal.image %>
+</div>
+
+<div class="bottom-nav">
   <%= link_to "Edit", edit_animal_path  %>
   <%= link_to "Delete", animal_path(@animal.id), method: :delete  %>
-  <%= link_to "back" , :back %>
+  <%= link_to "Back" , :back %>
+</div>
