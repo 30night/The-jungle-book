@@ -2,5 +2,6 @@
   <p><strong>Species: </strong><%= @animal.species.species_type %></p>
   <p><strong>Habitat: </strong><%= @animal.habitat %></p>
   <p><strong>Description: </strong><%= @animal.description %></p>
+  <img src="<%= @animal.image %>"> 
   <%= link_to "Edit", edit_animal_path  %>
   <%= link_to "Delete", animal_path(@animal.id), method: :delete  %>
