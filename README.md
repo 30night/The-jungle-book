@@ -1,36 +1,18 @@
-Project Zoo {
-  
-  Table users {
-    id int PK
-    name string
-    email varchar
-    password varchar
-  }
-  
-  Table animals {
-    id int PK
-    name string
-    species_id int 
-    habitat text
-    fun_fact text 
-    image string
-    user_id int 
-  }
-  
-  Table species {
-    id int PK 
-    species_id int
-  }
-  
-  <!-- // Table habitat {
-  //   id int PK
-  //   habitat_type string 
-  // }
-  } -->
+Welcome to the Jungle Book App! 
 
+All visitors are welcome to contribute and edit to the Jungle Book Directory - as you would using Wikipedia. 
 
-Ref: "users"."id" < "animals"."user_id"
+To contribute by adding new animals or editing, please sign up with your email address and a 6 character password. 
 
-Ref: "species"."id" < "animals"."species_id"
+Each animal can have an image attached, you may also describe and identify the name, habitat, species and add a description. 
 
-// Ref: "habitat"."id" < "animals"."habitat"
+![ERD Diagram](app/assets/images/Animals-ERD.png)
+
+![Wireframe - Desktop](app/assets/images/Desktop.png)
+
+![Wireframe - Mobile](app/assets/images/Phone.png)
+
+![Trello Board](app/assets/images/Trello.png)
+
+**Team:**  
+Harley, Emma & Parvez 
