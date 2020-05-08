@@ -1,7 +1,14 @@
 <%= render "nav-bar" %>
 
-<h1>new page</h1>
+<h3>Add A New Animal</h3>
 
+<div class="form-page">
 <%= render "form", animal: @animal %>
+</div>
 
- <%= link_to "Back" , :back %>
+<div class="bottom-nav">
+
+  <div class="bottom-links" >
+  <%= button_to " Back " , root_path, method: :get %>
+  </div>
+</div>

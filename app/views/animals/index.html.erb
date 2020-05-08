@@ -1,6 +1,6 @@
 <%= render "nav-bar" %>
 
-<h1>Animal Listing</h1>
+<h3>Animal Listing</h3>
 
 <% @animal.each do |animal| %>
   <%= link_to animal_path(animal) do  %>
@@ -12,5 +12,8 @@
 <% end %>
 
 <div class="bottom-nav">
-  <%= link_to "Back" , :back %>
+
+  <div class="bottom-links" >
+  <%= button_to " Back " , root_path, method: :get %>
+  </div>
 </div>
