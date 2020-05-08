@@ -8,7 +8,8 @@
 </div>
 
 <div class="bottom-nav">
-  <%= link_to "Edit", edit_animal_path  %>
-  <%= link_to "Delete", animal_path(@animal.id), method: :delete  %>
-  <%= link_to "Back" , :back %>
+
+  <div class="bottom-links" >
+  <%= button_to " Back " , root_path, method: :get %>
+  </div>
 </div>
