@@ -14,10 +14,10 @@
   </div>
 
   <div class="bottom-links" >
-  <%= button_to " Delete ", animal_path, method: :destroy %>
+  <%= button_to " Delete ", animal_path(@animal.id), method: "delete" %>
   </div>
 
   <div class="bottom-links" >
-  <%= button_to " Back " , root_path, method: :get %>
+  <%= button_to " Back ", root_path, method: :get %>
   </div>
 </div>
