@@ -1,14 +1,18 @@
 // Place all the styles related to the Animals controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
-.card{
-  display:flex;
-  justify-self: center;
-  max-width:100%;
-  align-items: center;
-  height:100%;
+// .card{
+//   display:flex;
+//   justify-self: center;
+//   max-width:100%;
+//   align-items: center;
+//   height:100%;
  
-}
+// }
+
+
+
+
 
 .cardmenu{
   display:flex;
@@ -16,12 +20,16 @@
   max-width:50%;
   align-items: center;
   max-height:50%;
-  flex-direction: column;
-  border: solid black .5px;
+  flex-direction: row;
+  border-top: solid grey .5px;
+  
   margin: 10px 0px;
   padding: 1px;
 }
-
+ .containermenu{
+  display: flex;
+  flex-wrap: wrap;
+ }
 
 img {
   max-width: 100%;

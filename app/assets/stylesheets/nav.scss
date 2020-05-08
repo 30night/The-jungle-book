@@ -4,9 +4,27 @@
 }
 
 .navbar {
-  background-color: lightgrey;
+  border-bottom: 0.5px dashed grey;
+  margin: 20px;
 }
 .nav-bar-brand {
   font-size: 22px;
   color: black;
+}
+
+h3 {
+  margin-left: 30px;
+}
+
+// BOTTOM NAV
+
+.bottom-nav {
+  border-top: 0.5px dashed grey;
+  display: flex;
+  flex-direction: row;
+  padding: 5px;
+}
+
+.bottom-links {
+  margin: 5px 20px;
 }
