@@ -8,7 +8,7 @@
       <ul class="nav navbar-nav">
 
         <li>
-        <%= button_to "Add New Animal", new_animal_path %>
+        <%= button_to "Add New Animal", new_animal_path, method: :get %>
         </li>
 
       <% if user_signed_in? %>

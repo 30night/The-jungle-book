@@ -6,7 +6,7 @@
   <%= link_to animal_path(animal) do  %>
 <div class="cardmenu">
   <h3><%= animal.name %></h3>
-  <%= image_tag animal.image %>
+  <%= image_tag animal.image if animal.image.attached? %>
 </div>
   <% end %>
 <% end %>

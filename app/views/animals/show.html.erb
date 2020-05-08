@@ -4,7 +4,7 @@
   <p><strong>Species: </strong><%= @animal.species.species_type %></p>
   <p><strong>Habitat: </strong><%= @animal.habitat %></p>
   <p><strong>Description: </strong><%= @animal.description %></p>
-  <%= image_tag @animal.image %>
+  <%= image_tag @animal.image if @animal.image.attached? %>
 </div>
 
 <div class="bottom-nav">
