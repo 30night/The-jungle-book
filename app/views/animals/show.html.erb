@@ -1,13 +1,21 @@
   <%= render "nav-bar" %>
- <div class="card">
-  <h3><%= @animal.name %></h3>
+ <div class="cardshow">
+  <h4><%= @animal.name %></h4>
   <p><strong>Species: </strong><%= @animal.species.species_type %></p>
   <p><strong>Habitat: </strong><%= @animal.habitat %></p>
-  <p><strong>Description: </strong><%= @animal.description %></p>
+  <p class="cardtextcontainer"><strong>Description: </strong><%= @animal.description %></p>
   <%= image_tag @animal.image if @animal.image.attached? %>
 </div>
 
 <div class="bottom-nav">
+
+  <div class="bottom-links" >
+  <%= button_to " Edit ", edit_animal_path, method: :get %>
+  </div>
+
+  <div class="bottom-links" >
+  <%= button_to " Delete ", animal_path, method: :destroy %>
+  </div>
 
   <div class="bottom-links" >
   <%= button_to " Back " , root_path, method: :get %>

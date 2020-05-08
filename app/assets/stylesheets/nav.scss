@@ -4,7 +4,7 @@
 }
 
 .navbar {
-  border-bottom: 0.5px dashed grey;
+  border-bottom: 1px dashed grey;
   margin: 20px;
 }
 .nav-bar-brand {
@@ -14,15 +14,22 @@
 
 h3 {
   margin-left: 30px;
+  margin-bottom: 15px;
+}
+
+h4 {
+  margin-bottom: 10px;
 }
 
 // BOTTOM NAV
 
 .bottom-nav {
-  border-top: 0.5px dashed grey;
+  // border-top: 1px dashed grey;
   display: flex;
   flex-direction: row;
   padding: 5px;
+  margin-top: 10px;
+  margin-left: 30px;
 }
 
 .bottom-links {
